@@ -1,6 +1,6 @@
-# 🎧 MagTapeDB: Dataset and Experiments for the Restoration of Historical Music Recordings
+# 🎧 MagTapeDB: A Dataset of Historical Magnetic Tape Recordings
 
-This repository accompanies the paper **"Diffusion-Based Denoising of Historical Recordings"** and gathers resources developed within the project **Restoration of Musicological Tape Recordings Using Deep Learning Models**, led by the **Audio Processing Group (GPA)** at the **Institute of Electrical Engineering, Universidad de la República (Uruguay)**, in collaboration with the **Lauro Ayestarán Center for Musical Documentation (CDM)**.
+This repository accompanies the paper **"MagTapeDB: A Dataset of Historical Magnetic Tape Recordings"** and gathers resources developed within the project **Restoration of Musicological Tape Recordings Using Deep Learning Models**, led by the **Audio Processing Group (GPA)** at the **Institute of Electrical Engineering, Universidad de la República (Uruguay)**, in collaboration with the **Lauro Ayestarán Center for Musical Documentation (CDM)**.
 
 The repository includes:
 - 🧩 **MagTapeDB** — a dataset of historical magnetic tape recordings, available under **Releases**.  
