@@ -43,6 +43,25 @@ The dataset is available in the [📦 Releases](../../releases) section of this 
 
 ---
 
+## Installation and Environment Setup
+
+To ensure a consistent and reproducible environment, we recommend using a **Python virtual environment**.
+
+### 1. Requirements
+
+- Python >= 3.9 (recommended: 3.10 or 3.11)  
+- pip >= 21.0  
+- git >= 2.30  
+- (Optional) Anaconda or Miniconda
+
+---
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/username/MagTapeDB.git
+cd MagTapeDB
+
 ## 🧠 Denoising Experiments
 
 The denoising module reproduces and compares multiple noise reduction approaches, including:
