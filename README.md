@@ -99,7 +99,7 @@ This module includes:
 Example:
 
 ```bash
-python enf_speed_estimation/estimate_enf.py --input data/examples/recording.wav
+python Plot_ENF_vs_TF.py #Entrar al link que muestra la terminal para la visualización interactiva
 python enf_speed_estimation/correct_speed.py --input recording.wav --enf_data enf_track.npy
 ```
 
