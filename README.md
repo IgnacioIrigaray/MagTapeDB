@@ -73,7 +73,7 @@ Using Python’s built-in venv:
 python3 -m venv .venv
 source .venv/bin/activate      # On macOS/Linux
 # .venv\Scripts\activate       # On Windows
-
+```
 ---
 
 ### 4. Install Dependencies
@@ -83,6 +83,7 @@ If the repository contains a requirements.txt file:
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
+```
 
 ---
 
