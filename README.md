@@ -85,6 +85,16 @@ pip install -r requirements.txt
 
 ---
 
+### 5. Install sox
+
+
+
+```bash
+brew install sox #Mac
+```
+
+---
+
 ## 🧠 Baseline Experiments
 
 ### 1. Speed Correction using ENF
