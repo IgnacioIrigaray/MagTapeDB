@@ -61,6 +61,7 @@ To ensure a consistent and reproducible environment, we recommend using a **Pyth
 ```bash
 git clone https://github.com/IgnacioIrigaray/MagTapeDB.git
 cd MagTapeDB
+```
 
 ---
 
