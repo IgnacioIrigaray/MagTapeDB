@@ -14,23 +14,17 @@ The repository includes:
 ```
 MagTapeDB/
 │
-├── data/                     # Links or examples from the dataset
-│   ├── examples/             # Demonstration audio fragments
-│   └── metadata.csv          # Metadata (instrument, year, tape number, etc.)
+├── audio_samples/
+│   ├── XXX.wav
+│   └── XXXbis.wav
 │
-├── denoising/                # Denoising experiments
-│   ├── configs/              # Training and evaluation parameters
-│   ├── models/               # Checkpoints and architectures (U-Net, Diffusion)
-│   ├── scripts/              # Training and inference scripts
-│   └── results/              # Processed audio examples
+├── tape_noise/
+│   └── tapeXX_noiseYY.wav
 │
-├── enf_speed_estimation/     # Playback speed estimation (ENF)
-│   ├── analysis/             # ENF extraction and analysis scripts
-│   ├── visualization/        # Plots and results
-│   └── data/                 # Audio fragments used in ENF experiments
+├── tuning_fork/
+│   └── XXXX_tf.wav/
 │
-├── LICENSE
-└── README.md
+└── MagTapeDB_info.csv
 ```
 
 ---
