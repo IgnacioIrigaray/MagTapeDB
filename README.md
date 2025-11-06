@@ -59,8 +59,31 @@ To ensure a consistent and reproducible environment, we recommend using a **Pyth
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/username/MagTapeDB.git
+git clone https://github.com/IgnacioIrigaray/MagTapeDB.git
 cd MagTapeDB
+
+---
+
+### 3. Create a Virtual Environment
+
+Using Python’s built-in venv:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate      # On macOS/Linux
+# .venv\Scripts\activate       # On Windows
+
+---
+
+### 4. Install Dependencies
+
+If the repository contains a requirements.txt file:
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+
+---
 
 ## 🧠 Denoising Experiments
 
