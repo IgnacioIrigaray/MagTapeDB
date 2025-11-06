@@ -1,0 +1,13 @@
+
+path_music_train: [ "/mnt/data/working_datasets/denoising_historical_recordings/train"]
+path_music_validation: ["/mnt/data/working_datasets/denoising_historical_recordings/validation"]
+path_music_test: ["/mnt/data/working_datasets/denoising_historical_recordings/validation"]
+
+#  path_piano_test: ["/scratch/work/molinee2/datasets/MusicNet_with_opera/test/piano"]
+#  path_strings_test: ["/scratch/work/molinee2/datasets/MusicNet_with_opera/test/strings"]
+#  path_orchestra_test: ["/scratch/work/molinee2/datasets/MusicNet_with_opera/test/orchestra"]
+#  path_opera_test: ["/scratch/work/molinee2/datasets/MusicNet_with_opera/test/opera"]
+
+#  path_noise: "/home/nacho/working_datasets/tape_noiseDB" #path with noise samples. There must be an info.csv file there
+path_noise: "/home/nacho/pipeline/AudioSlice/mag_tape_db_AudioSlice" #path with noise samples. There must be an info.csv file there        
+path_recordings: "/scratch/work/molinee2/datasets/real_noisy_data_test" #path with real noisy recordings. There must be an audio_files.txt file there
