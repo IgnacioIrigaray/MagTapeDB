@@ -49,10 +49,8 @@ To ensure a consistent and reproducible environment, we recommend using a **Pyth
 
 ### 1. Requirements
 
-- Python >= 3.9 (recommended: 3.10 or 3.11)  
-- pip >= 21.0  
-- git >= 2.30  
-- (Optional) Anaconda or Miniconda
+- Python == 3.12  
+- pip == 24.0  
 
 ---
 
@@ -87,24 +85,9 @@ pip install -r requirements.txt
 
 ---
 
-## 🧠 Denoising Experiments
+## 🧠 Baseline Experiments
 
-The denoising module reproduces and compares multiple noise reduction approaches, including:
-
-- **U-Net** and **Diffusion-based** architectures  
-- Supervised training on paired clean/noisy audio  
-- Objective and perceptual evaluation metrics (SNR, SI-SDR, PESQ)
-
-Example usage:
-
-```bash
-python denoising/train.py --config configs/unet_baseline.yaml
-python denoising/evaluate.py --input data/examples/noisy.wav --model results/checkpoints/unet_latest.pth
-```
-
----
-
-## ⚙️ Playback Speed Estimation (ENF)
+### 1. Speed Correction using ENF
 
 The **Electric Network Frequency (ENF)** component serves as a temporal reference for identifying playback speed fluctuations in analog recordings.
 
@@ -118,6 +101,21 @@ Example:
 ```bash
 python enf_speed_estimation/estimate_enf.py --input data/examples/recording.wav
 python enf_speed_estimation/correct_speed.py --input recording.wav --enf_data enf_track.npy
+```
+
+### 2. Denoising
+
+The denoising module reproduces and compares multiple noise reduction approaches, including:
+
+- **U-Net** and **Diffusion-based** architectures  
+- Supervised training on paired clean/noisy audio  
+- Objective and perceptual evaluation metrics (SNR, SI-SDR, PESQ)
+
+Example usage:
+
+```bash
+python denoising/train.py --config configs/unet_baseline.yaml
+python denoising/evaluate.py --input data/examples/noisy.wav --model results/checkpoints/unet_latest.pth
 ```
 
 ---
