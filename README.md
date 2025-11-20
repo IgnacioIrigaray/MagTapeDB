@@ -49,7 +49,7 @@ To ensure a consistent and reproducible environment, we recommend using a **Pyth
 
 ### 1. Requirements
 
-- Python == 3.12  
+- Python == 3.11  
 - pip == 24.0  
 
 ---
@@ -79,18 +79,7 @@ source .venv/bin/activate      # On macOS/Linux
 If the repository contains a requirements.txt file:
 
 ```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
----
-
-### 5. Install sox
-
-
-
-```bash
-brew install sox #Mac
+pip install -r requirements_full.txt
 ```
 
 ---
@@ -109,8 +98,8 @@ This module includes:
 Example:
 
 ```bash
-python Plot_ENF_vs_TF.py #Entrar al link que muestra la terminal para la visualización interactiva
-python enf_speed_estimation/correct_speed.py --input recording.wav --enf_data enf_track.npy
+python Plot_ENF_vs_TF.py #Entrar al link que muestra la terminal para la visualización interactiva. Funciona solo de forma local
+python enf_speed_estimation/correct_speed.py --input recording.wav --enf_data enf_track.npy #No existe nada de esto
 ```
 
 ### 2. Denoising
@@ -124,7 +113,7 @@ The denoising module reproduces and compares multiple noise reduction approaches
 Example usage:
 
 ```bash
-python denoising/train.py --config configs/unet_baseline.yaml
+python denoising/train_denoise.py --config denoising/conf/dset/dataset.yaml #Configurar directorios de train, val y noise
 python denoising/evaluate.py --input data/examples/noisy.wav --model results/checkpoints/unet_latest.pth
 ```
 
