@@ -98,9 +98,11 @@ This module includes:
 Example:
 
 ```bash
-python Plot_ENF_vs_TF.py #Entrar al link que muestra la terminal para la visualización interactiva. Funciona solo de forma local
+python Plot_ENF_vs_TF.py
 python enf_speed_estimation/correct_speed.py --input recording.wav --enf_data enf_track.npy #No existe nada de esto
 ```
+
+This script launches an interactive visualization accessible through a local browser link printed in the terminal.
 
 ### 2. Denoising
 
@@ -110,12 +112,43 @@ The denoising module reproduces and compares multiple noise reduction approaches
 - Supervised training on paired clean/noisy audio  
 - Objective and perceptual evaluation metrics (SNR, SI-SDR, PESQ)
 
+#### Downloading MusicNet
+Some experiments require the MusicNet dataset. You can download and extract it using:
+
+```bash
+wget -c "https://zenodo.org/api/records/5120004/files/musicnet.tar.gz/content"
+mv content musicnet.tar.gz
+tar -xzf musicnet.tar.gz
+```
+
 Example usage:
 
 ```bash
-python denoising/train_denoise.py --config denoising/conf/dset/dataset.yaml #Configurar directorios de train, val y noise
+python denoising/AudioSliceLeaveOneOut.py #Cambiar input_path a /path_to_tap_noise y output_path
+```
+Configure the paths inside the script (e.g., input_path for tape noise and output_path for the sliced dataset).
+```bash
+python denoising/train_denoise.py #Configurar directorios de train, val y noise en denoising/conf/dset/dataset.yaml. Se pueden configurar los parámetros de la red en denoising/conf/conf.yaml. path_noise debe ser la salida de AudioSliceLeaveOneOut.py, train y val deben ser los conjuntos de train y test de MusicNet
+```
+Set the training, validation, and noise directories in:
+```bash
+denoising/conf/dset/dataset.yaml
+```
+`path_noise` should point to the output of `AudioSliceLeaveOneOut.py`, and `train/val` should point to the MusicNet split.
+
+Model parameters can be configured in 
+```bash
+python denoising/conf/conf.yaml
+```
+
+Revisa esto Irigaray
+```bash
 python denoising/evaluate.py --input data/examples/noisy.wav --model results/checkpoints/unet_latest.pth
 ```
+Configure the paths inside the script (e.g., input_path for tape noise and output_path for the sliced dataset).
+
+
+
 
 ---
 
